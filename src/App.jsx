@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { postData } from "./data/data.js";
 
 function App() {
   return (
