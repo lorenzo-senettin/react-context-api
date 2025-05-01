@@ -1,11 +1,14 @@
 import { useState } from "react";
 import PostsPage from "./components/PostsPage.jsx";
-import { postData } from "./data/data.js";
+import { PostsProvider } from "./contexts/PostsContext.jsx";
+import { postsData } from "./data/data";
 
 function App() {
   return (
     <>
-      <h1>Hello, World!</h1>
+      <PostsProvider posts={postsData}>
+        <PostsPage />
+      </PostsProvider>
     </>
   );
 }
